@@ -1,0 +1,24 @@
+struct Animation {
+  uint8_t nFrames;
+  uint8_t repetitions;
+  uint16_t frameDuration;
+  uint32_t *frames;
+  Animation* next;
+};
+
+
+Animation pulseRight = {
+  6,
+  0,
+  300,
+  (uint32_t[]) {
+    0xFFFFFF, 0x333333, 0x333333, 0x333333,
+    0xFFFFFF, 0xFFFFFF, 0x333333, 0x333333,
+    0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 0x333333,
+    0x333333, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF,
+    0x333333, 0x333333, 0xFFFFFF, 0xFFFFFF,
+    0x333333, 0x333333, 0x333333, 0xFFFFFF,
+  },
+  NULL
+};
+
